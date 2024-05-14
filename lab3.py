@@ -13,3 +13,24 @@
 # 4. Reproduce the instances of the Contact class that you created in Lab 2
 # 5. Call your new instance method on one Contact and print the result
 # 6. Use the class method to print out the total number of contacts
+class Contact:
+    number_of_contacts = 0
+
+    def __init__(self, name, ph_number, email):
+        self.email = email
+        self.name = name
+        self.ph_number = ph_number
+        Contact.number_of_contacts += 1
+
+    def check_email(self):
+        if "@" in self.email:
+            print(f"{self.name}'s email is valid")
+            return True
+        else:
+            print(f"{self.name}'s email is invalid")
+            return False
+        
+contact1 = Contact("Jeff", "0401 736 925", "jeff@gmail.com")
+contact2 = Contact("Bill", "0487 873 173", "poppy@gmail.com")
+
+contact1.check_email()

@@ -29,8 +29,11 @@ class Contact:
         else:
             print(f"{self.name}'s email is invalid")
             return False
-        
+    
+    def __str__(self):
+        return self.name
+    
 contact1 = Contact("Jeff", "0401 736 925", "jeff@gmail.com")
-contact2 = Contact("Bill", "0487 873 173", "poppy@gmail.com")
+contact2 = Contact("Bill", "0487 873 173", "poopy@gmail.com")
 
 contact1.check_email()
